@@ -33,7 +33,7 @@ $(function() {
   //    and "returns" the duck object
 
   function createDuck() {
-    $('body').append('<div class = "duck"></div>');
+    $('body').append('<div class="duck"></div>');
     $('body').css('position', 'relative');
     setInterval(function () {
       $('.duck').toggleClass('flap');
@@ -64,12 +64,12 @@ $(function() {
   //    using our fancy new createDuck() function
 
   function manyDucks() {
-    for (let i = 1; i < 6; i++) {
+    for (let i = 1; i < 5; i++) {
       createDuck() * i;
     }};
   
   manyDucks();
-  
+  // WHY IF I HAVE SIX DUCKS DOES THIS NOT WORK
   
   // 8. Uh oh, our ducks are overlapping.  Modify createDuck so each time
   //     it creates a duck, it appears in a random location
@@ -98,7 +98,7 @@ $(function() {
   
   function duckShot () {
    $('.duck').click(function() {
-     $(this).append('<div class =".shot"></div>');
+     $(this).toggleClass("shot");
    });
   }
 
